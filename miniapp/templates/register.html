@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a0f21795dc.js" crossorigin="anonymous"></script>
+    <style>
+        .m{
+            width: 100%;
+            height: 1000px;
+            padding-top: 50px;
+        }
+        .input-group{
+            width: 80%;
+            margin-left: 7%;
+
+        }
+        .r{
+            padding-top: 30px;
+            padding-bottom: 10px;
+            background-color: rgb(216, 218, 219);
+            width: 60%;
+            margin-left: 20%;
+
+        }
+        h2{
+            text-align: center;
+            padding-bottom: 30px;
+
+        }
+        .col-3{
+            text-align: right;
+        }
+        .btn{
+            margin-left: 45%;
+            width: 20%;
+
+        }
+    </style>
+</head>
+<body>
+<form method="post"> {% csrf_token %}
+      <div class="m">
+        <div class="r ml-5">
+            <h2>django user authentication signup page</h2>
+            <div class="input-group input-group-sm mb-3">
+                <div class="col-3"><label class="l mt-2"><strong>Username</strong></label></div>
+                <div class="col-1"></div>
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                <input type="text" class="form-control" placeholder="Username" name="username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <div class="col-3"><label class="l mt-2"><strong>E-Mail</strong></label></div>
+                <div class="col-1"></div>
+                <span class="input-group-text" id="basic-addon1"><i class="fa-sharp fa-solid fa-envelope"></i></span>
+                <input type="email" class="form-control" placeholder="E-Mail Address" name="email" aria-label="email" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <div class="col-3"><label class="l mt-2"><strong>First Name</strong></label></div>
+                <div class="col-1"></div>
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                <input type="text" class="form-control" placeholder="First Name" name="fname" aria-label="Firstname" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <div class="col-3"><label class="l mt-2"><strong>Last Name</strong></label></div>
+                <div class="col-1"></div>
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                <input type="text" class="form-control" placeholder="Last Name" name="lname" aria-label="lastname" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+                <div class="col-3"><label class="l mt-2"><strong>Password</strong></label></div>
+                <div class="col-1"></div>
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                <input type="password" class="form-control" placeholder="Password" name="password" aria-label="password" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group  input-group-sm mb-3">
+                <input type="submit" class="btn btn-warning text-white btn-lg" >
+<!--                <i class="fa-solid fa-paper-plane"></i>-->
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

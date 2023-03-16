@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/a0f21795dc.js" crossorigin="anonymous"></script>
+         <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+     <link rel="stylesheet" href="{% static 'responsive.css' %}">
+
+       <style>
+
+      #aaa{
+          color: white;
+      }
+      .navbar-brand{
+          font-size: 25px;
+      }
+      .d-block{
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+      }
+      .card:hover{
+          transform: scale(1.08);
+      }
+      a{
+        text-decoration: none;
+        color: #212529;
+      }
+      .dot{
+         background-color: rgb(167, 247, 47);
+         border-radius: 50%;
+         width: 50px;
+         height: 50px;
+         margin-left: 39%;
+      }
+      h5,p{
+        text-align: left;
+      }
+      button{
+      border:none;
+      border-radius:30px;
+      width:60px;
+      margin
+      }
+      a{
+      color:white;
+      text-decoration:none;
+      }
+
+
+   </style>
+</head>
+<body>
+    <div class="header_section" style="background-image:url({% static 'banner-bg.png' %});">
+        <div class="container" style="">
+           <nav class="navbar navbar-dark bg-dark">
+              <a class="logo" href="http://127.0.0.1:8000/profile/{{x}}/{{y}}" style=" width: 50%;"><img src="{% static 'logo.png' %}"></a>
+              <div class="search_section">
+              </div>
+               <li style="color: white; font-size: medium;">{{x}}<i class="fa-solid fa-circle-user fa-2x" style="color: white; padding-left: 10px;"></i></li>
+
+           </nav>
+
+        </div>
+    </div>
+  <div class="container">
+      <center>
+        <div class="row">
+            {% for i,j,k,l,m,n in mylist %}
+
+            <div class="col-sm-12 col-md-6 col-lg-4 pt-5">
+                <div class="card" style="width: 13rem;">
+                    <img src="{% static i %}" class="card-img-top" alt="..." style="width: 10rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">{{j}}</h5>
+                        <p class="card-text">{{l}}</p>
+                      <p class="card-text">$ {{k}}</p>
+<!--                        <button type="button" style="background-color:blue"><a href="http://127.0.0.1:8000/addcart/{{m}}">Cart</a> </button>-->
+                      <button type="button" style="background-color:green"><a href="http://127.0.0.1:8000/buy/{{m}}">Buy</a> </button>
+                        <button type="button" style="background-color:red"><a href="http://127.0.0.1:8000/cartdelete/{{m}}/{{y}}">Remove</a> </button>
+
+                    </div>
+                  </div>
+            </div>
+
+            {% endfor %}
+        </div>
+          </center>
+    </div>
+
+
+</body>
+</html>

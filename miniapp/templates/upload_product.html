@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
+        <script src="https://kit.fontawesome.com/a0f21795dc.js" crossorigin="anonymous"></script>
+         <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="{% static 'responsive.css' %}">
+
+       <style>
+
+      #aaa{
+          color: white;
+      }
+      .navbar-brand{
+          font-size: 25px;
+      }
+      .d-block{
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+      }
+      .card:hover{
+          transform: scale(1.08);
+      }
+      a{
+        text-decoration: none;
+        color: #212529;
+      }
+      .dot{
+         background-color: rgb(167, 247, 47);
+         border-radius: 50%;
+         width: 50px;
+         height: 50px;
+         margin-left: 39%;
+      }
+
+        .input-group{
+            width: 60%;
+            margin-left: 25%;
+            background-color: white;
+
+        }
+        .r{
+            padding-top: 30px;
+            padding-bottom: 10px;
+            width: 60%;
+            margin-left: 20%;
+
+        }
+        h2{
+            text-align: center;
+            padding-bottom: 30px;
+
+        }
+        .col-3{
+            text-align: right;
+        }
+        .btn{
+            margin-left: 45%;
+            width: 20%;
+
+        }
+
+   </style>
+</head>
+<body style="background-image:url({% static 'banner-bg.png' %});">
+    <div class="header_section" style="background-image:url({% static 'banner-bg.png' %});">
+        <div class="container" style="">
+           <nav class="navbar navbar-dark bg-dark">
+              <a class="logo" href="index.html" style=" width: 50%;"><img src="{% static 'logo.png' %}"></a>
+              <div class="search_section">
+              </div>
+               <li style="color: white; font-size: medium;">{{x}}<i class="fa-solid fa-circle-user fa-2x" style="color: white; padding-left: 10px;"></i></li>
+
+           </nav>
+
+        </div>
+<form method="post" enctype="multipart/form-data"> {% csrf_token %}
+      <div class="m">
+        <div class="r ml-5">
+            <h2 style="color:white;">Upload Products</h2>
+            <div class="input-group input-group-sm ">
+                <div class="col-3"><label class="l "><strong>Product Name</strong></label></div>
+                <div class="col-1"></div>
+                <input type="text" class="form-control" placeholder="Product Name" name="pname" >
+            </div>
+            <div class="input-group input-group-sm mt-1">
+                <div class="col-3"><label class="l "><strong>Product id</strong></label></div>
+                <div class="col-1"></div>
+                <input type="text" class="form-control" placeholder="Product id" name="pid">
+            </div>
+            <div class="input-group input-group-sm mt-1">
+                <div class="col-3"><label class="l "><strong>Product Image</strong></label></div>
+                <div class="col-1"></div>
+                <input type="file" class="form-control" placeholder="Product Image" name="image">
+            </div>
+            <div class="input-group input-group-sm mt-1">
+                <div class="col-3"><label class="l"><strong>Price</strong></label></div>
+                <div class="col-1"></div>
+                <input type="text" class="form-control" placeholder="Price" name="price" >
+            </div>
+
+            <div class="input-group input-group-sm mt-1">
+                <div class="col-3"><label class="l "><strong>Description</strong></label></div>
+                <div class="col-1"></div>
+                <input type="text" class="form-control" placeholder="Description" name="des">
+            </div>
+
+<!--            <div class="input-group  input-group-sm ">-->
+                <input type="submit" class="btn btn-warning text-white btn-sm mt-4" >
+<!--                <i class="fa-solid fa-paper-plane"></i>-->
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+</body>
+</html>

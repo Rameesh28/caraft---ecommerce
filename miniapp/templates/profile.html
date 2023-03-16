@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
+        <script src="https://kit.fontawesome.com/a0f21795dc.js" crossorigin="anonymous"></script>
+         <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="{% static 'responsive.css' %}">
+
+       <style>
+
+      #aaa{
+          color: white;
+      }
+      .navbar-brand{
+          font-size: 25px;
+      }
+      .d-block{
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+      }
+      .card:hover{
+          transform: scale(1.08);
+      }
+      a{
+        text-decoration: none;
+        color: #212529;
+      }
+      .dot{
+         background-color: rgb(167, 247, 47);
+         border-radius: 50%;
+         width: 50px;
+         height: 50px;
+         margin-left: 39%;
+      }
+
+   </style>
+</head>
+<body style="background-image:url({% static 'banner-bg.png' %});">
+    <div class="header_section" style="background-image:url({% static 'banner-bg.png' %});">
+        <div class="container" style="">
+           <nav class="navbar navbar-dark bg-dark">
+              <a class="logo" href="index.html" style=" width: 50%;"><img src="{% static 'logo.png' %}"></a>
+              <div class="search_section">
+              </div>
+               <li style="color: white; font-size: medium;">{{x}}<i class="fa-solid fa-circle-user fa-2x" style="color: white; padding-left: 10px;"></i></li>
+
+           </nav>
+
+        </div>
+      <div class="row" style="margin-top: 10%; padding-left: 24%; width: 100%; ">
+         <div class="col-sm-12 col-md-6 col-lg-3 pt-3 pb-3" id="ca">
+           <a href="http://127.0.0.1:8000/product_upload/{{y}}">
+             <div class="card" style="width: 70%;">
+               <span class="dot" style="margin-top: 10%;"><i class="fa-solid fa-plus fa-lg" style="color: white; padding-left: 35%; padding-top: 45%;"></i></span>
+                 <div class="card-body">
+                   <h5 class="card-title" style="margin-top: 5%; text-align: center;">Add Products</h5>
+                   <!-- <p class="card-text">₹35,999<strike class="str" style="padding-left: 10px;">₹49,999</strike></p>
+                   <a href="#" class="btn btn-primary btn-sm "id="bb"><i class="fa-solid fa-bag-shopping fa-sm"></i></a>
+                   <a href="#" class="btn btn-primary btn-sm" id="bbb"><i class="fa-solid fa-cart-shopping fa-sm"></i></a> -->
+
+                 </div>
+               </div>
+           </a>
+
+      </div>
+
+         <div class="col-sm-12 col-md-6 col-lg-3 pt-3 pb-3" id="ca">
+            <a href="http://127.0.0.1:8000/editshopuser/{{y}}">
+             <div class="card" style="width: 70%;">
+               <span class="dot" style="margin-top: 10%;"><i class="fa-solid fa-pen-to-square fa-lg" style="color: white; padding-left: 30%; padding-top: 45%;"></i></span>
+                 <div class="card-body">
+                   <h5 class="card-title" style="margin-top: 5%; text-align: center;">Edit Profile</h5>
+                   <!-- <p class="card-text">₹35,999<strike class="str" style="padding-left: 10px;">₹49,999</strike></p>
+                   <a href="#" class="btn btn-primary btn-sm "id="bb"><i class="fa-solid fa-bag-shopping fa-sm"></i></a>
+                   <a href="#" class="btn btn-primary btn-sm" id="bbb"><i class="fa-solid fa-cart-shopping fa-sm"></i></a> -->
+
+                 </div>
+               </div>
+            </a>
+         </div>
+
+         <div class="col-sm-12 col-md-6 col-lg-3 pt-3 pb-3" id="ca">
+           <a href="http://127.0.0.1:8000/display">
+             <div class="card" style="width: 70%;">
+               <span class="dot" style="margin-top: 10%;"><i class="fa-solid fa-eye fa-lg" style="color: white; padding-left: 27%; padding-top: 45%;"></i></span>
+                 <div class="card-body">
+                   <h5 class="card-title" style="margin-top: 5%; text-align: center;">Product Display</h5>
+                   <!-- <p class="card-text">₹35,999<strike class="str" style="padding-left: 10px;">₹49,999</strike></p>
+                   <a href="#" class="btn btn-primary btn-sm "id="bb"><i class="fa-solid fa-bag-shopping fa-sm"></i></a>
+                   <a href="#" class="btn btn-primary btn-sm" id="bbb"><i class="fa-solid fa-cart-shopping fa-sm"></i></a> -->
+
+                 </div>
+               </div>
+           </a>
+         </div>
+      </div>
+</div>
+</body>
+</html>
